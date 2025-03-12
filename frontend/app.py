@@ -8,7 +8,7 @@ API_URL = "http://127.0.0.1:8000/predict/"
 st.title("Loan Risk Prediction App")
 
 # Collect user inputs
-Income = st.number_input("Income", min_value=0, step=1000)
+Income = st.number_input("Income", min_value=0)
 Age = st.number_input("Age", min_value=18, max_value=100, step=1)
 Experience = st.number_input("Work Experience (Years)", min_value=0, step=1)
 CURRENT_JOB_YRS = st.number_input("Years in Current Job", min_value=0, step=1)
@@ -17,8 +17,18 @@ CURRENT_HOUSE_YRS = st.number_input("Years in Current House", min_value=0, step=
 Married_Single = st.selectbox("Marital Status", ["married", "single"])
 House_Ownership = st.selectbox("House Ownership", ["owned", "rented", "norent_noown"])
 Car_Ownership = st.selectbox("Car Ownership", ["yes", "no"])
-Profession = st.text_input("Profession")
-CITY = st.text_input("City",['Rewa', 'Parbhani', 'Alappuzha', 'Bhubaneswar', 'Tiruchirappalli', 'Jalgaon',
+Profession = st.selectbox("Profession", ['Mechanical_engineer', 'Software_Developer', 'Technical_writer', 'Civil_servant', 
+                                         'Librarian', 'Economist', 'Flight_attendant', 'Architect', 'Designer', 'Physician',
+                                         'Financial_Analyst', 'Air_traffic_controller', 'Politician', 'Police_officer', 'Artist', 
+                                         'Surveyor', 'Design_Engineer', 'Chemical_engineer', 'Hotel_Manager', 'Dentist', 'Comedian', 
+                                         'Biomedical_Engineer', 'Graphic_Designer', 'Computer_hardware_engineer', 'Petroleum_Engineer', 
+                                         'Secretary', 'Computer_operator', 'Chartered_Accountant', 'Technician', 'Microbiologist', 
+                                         'Fashion_Designer', 'Aviator', 'Psychologist', 'Magistrate', 'Lawyer', 'Firefighter', 'Engineer',
+                                         'Official', 'Analyst', 'Geologist', 'Drafter', 'Statistician', 'Web_designer', 'Consultant', 
+                                         'Chef', 'Army_officer', 'Surgeon', 'Scientist', 'Civil_engineer', 'Industrial_Engineer', 
+                                         'Technology_specialist'])
+
+CITY = st.selectbox("City",['Rewa', 'Parbhani', 'Alappuzha', 'Bhubaneswar', 'Tiruchirappalli', 'Jalgaon',
                              'Tiruppur', 'Jamnagar', 'Kota', 'Karimnagar', 'Hajipur', 'Adoni', 'Erode',
                              'Kollam', 'Madurai', 'Anantapuram', 'Kamarhati', 'Bhusawal', 'Sirsa',
                              'Amaravati', 'Secunderabad', 'Ahmedabad', 'Ajmer', 'Ongole', 'Miryalaguda',
@@ -72,7 +82,7 @@ CITY = st.text_input("City",['Rewa', 'Parbhani', 'Alappuzha', 'Bhubaneswar', 'Ti
                              'Raurkela_Industrial_Township', 'Gwalior', 'Katni', 'Chandrapur', 'Kolhapur']
 
                      )
-STATE = st.text_input("State",['Madhya_Pradesh', 'Maharashtra', 'Kerala', 'Odisha', 'Tamil_Nadu', 'Gujarat',
+STATE = st.selectbox("State",['Madhya_Pradesh', 'Maharashtra', 'Kerala', 'Odisha', 'Tamil_Nadu', 'Gujarat',
                                'Rajasthan', 'Telangana', 'Bihar', 'Andhra_Pradesh', 'West_Bengal', 'Haryana',
                                'Puducherry', 'Karnataka', 'Uttar_Pradesh', 'Himachal_Pradesh', 'Punjab',
                                'Tripura', 'Uttarakhand', 'Jharkhand', 'Mizoram', 'Assam', 'Jammu_and_Kashmir',

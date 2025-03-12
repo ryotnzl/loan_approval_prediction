@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from backend.predict import router as predict_router
+import catboost
 
 app = FastAPI(title="Loan Risk Prediction API")
 
