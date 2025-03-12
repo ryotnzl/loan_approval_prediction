@@ -8,18 +8,18 @@ API_URL = "http://127.0.0.1:8000/predict/"
 st.title("Loan Risk Prediction App")
 
 # Collect user inputs
-Income = st.number_input("Income", min_value=0, step=1000, value=50000)
-Age = st.number_input("Age", min_value=18, max_value=100, step=1, value=30)
-Experience = st.number_input("Work Experience (Years)", min_value=0, step=1, value=5)
-CURRENT_JOB_YRS = st.number_input("Years in Current Job", min_value=0, step=1, value=3)
-CURRENT_HOUSE_YRS = st.number_input("Years in Current House", min_value=0, step=1, value=4)
+Income = st.number_input("Income", min_value=0, step=1000)
+Age = st.number_input("Age", min_value=18, max_value=100, step=1)
+Experience = st.number_input("Work Experience (Years)", min_value=0, step=1)
+CURRENT_JOB_YRS = st.number_input("Years in Current Job", min_value=0, step=1)
+CURRENT_HOUSE_YRS = st.number_input("Years in Current House", min_value=0, step=1)
 
 Married_Single = st.selectbox("Marital Status", ["married", "single"])
 House_Ownership = st.selectbox("House Ownership", ["owned", "rented", "norent_noown"])
 Car_Ownership = st.selectbox("Car Ownership", ["yes", "no"])
-Profession = st.text_input("Profession", value="Software Engineer")
-CITY = st.text_input("City", value="Mumbai")
-STATE = st.text_input("State", value="Maharashtra")
+Profession = st.text_input("Profession")
+CITY = st.text_input("City")
+STATE = st.text_input("State")
 
 # Submit button
 if st.button("Predict Loan Risk"):
