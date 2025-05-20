@@ -85,12 +85,19 @@ The **CatBoost Classifier**, after thorough hyperparameter tuning, emerged as th
 ## Project Structure
 
 This repository is organized to ensure clarity and ease of navigation:
+
 ├── backend/                  # (Placeholder for potential future backend services or APIs)
+
 ├── data/                     # Raw and processed datasets
+
 ├── frontend/                 # (Placeholder for UI-related files, e.g., Streamlit app)
+
 ├── models/                   # Trained machine learning models (e.g., final_model.pkl)
+
 ├── notebooks/                # Jupyter Notebooks for EDA, model training, and evaluation
+
 ├── .gitattributes            # Git LFS configuration for large files
+
 └── README.md                 # This README file
 
 ---
@@ -104,47 +111,6 @@ This repository is organized to ensure clarity and ease of navigation:
 * **Interactive Development:** Jupyter Notebook
 * **Version Control:** Git, GitHub
 * **User Interface:** Streamlit (for the frontend application)
-
----
-
-## How to Run This Project Locally
-
-To set up and run this project on your local machine, follow these steps:
-
-1.  **Clone the Repository:**
-    ```bash
-    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-    cd your-repo-name
-    ```
-    *(Remember to replace `your-username` and `your-repo-name` with your actual GitHub details.)*
-
-2.  **Create a Virtual Environment (Recommended):**
-    ```bash
-    python -m venv venv
-    # On Windows:
-    .\venv\Scripts\activate
-    # On macOS/Linux:
-    source venv/bin/activate
-    ```
-
-3.  **Install Dependencies:**
-    First, ensure you have a `requirements.txt` file in your root directory (you can generate one by running `pip freeze > requirements.txt` after installing all libraries).
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4.  **Run the Jupyter Notebooks:**
-    For a detailed walkthrough of the data analysis, model training, and evaluation:
-    ```bash
-    jupyter notebook
-    ```
-    Then, navigate to the `notebooks/` directory and open the relevant `.ipynb` files.
-
-5.  **Run the Streamlit Application (Frontend):**
-    If you've built a Streamlit UI, navigate to the `frontend/` directory (or wherever your Streamlit script is) and run:
-    ```bash
-    streamlit run your_app_name.py # Replace 'your_app_name.py' with your Streamlit script name
-    ```
 
 ---
 
